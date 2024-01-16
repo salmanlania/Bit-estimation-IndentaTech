@@ -1,0 +1,28 @@
+/* Styles for the select tag with class */
+.custom-select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  appearance: none;
+  width: 100%;
+}
+
+/* Styles for the option tags with class */
+.custom-option {
+  background-color: #fff; /* Background color */
+  color: #333; /* Text color */
+  padding: 5px 10px;
+}
+
+/* Styles for the option tags when hovered */
+.custom-option:hover {
+  background-color: #f0f0f0; /* Background color on hover */
+}
+
+/* Styles for the option tags when selected */
+.custom-option:checked {
+  background-color: #719ece; /* Background color of the selected option */
+  color: #fff; /* Text color of the selected option */
+}

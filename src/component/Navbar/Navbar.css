@@ -1,0 +1,926 @@
+li {
+    list-style: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.toggleNavbar {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.toggleNavbar>.toggleNavbarIcon {
+    opacity: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul.vertical {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    max-height: 100vh;
+    background-color: #3a6896cc;
+    color: #ecf0f1;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    z-index: 1000;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
+.navbar {
+    scroll-behavior: smooth;
+}
+
+ul.Visible {
+    scroll-behavior: smooth;
+    transition: 1s;
+    transform: translate(ease-out);
+    visibility: visible;
+}
+
+ul.vertical {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    /* Firefox */
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+ul.vertical::-webkit-scrollbar-thumb {
+    background-color: #56d8e4;
+    scroll-behavior: smooth;
+    /* Thumb color for WebKit browsers */
+}
+
+/* Style the scrollbar track */
+ul.vertical::-webkit-scrollbar-track {
+    background-color: #9f01ea;
+    scroll-behavior: smooth;
+    /* Track color for WebKit browsers */
+}
+
+/* Style the scrollbar thumb and track for Firefox */
+ul.vertical::-moz-scrollbar-thumb {
+    background-color: #56d8e4;
+    /* Thumb color for Firefox */
+    scroll-behavior: smooth;
+}
+
+ul.vertical::-moz-scrollbar-track {
+    background-color: #9f01ea;
+    /* Track color for Firefox */
+    scroll-behavior: smooth;
+}
+
+.li.vertical_li {
+    display: none;
+    color: #ecf0f1;
+    padding: 8px 16px;
+}
+
+.li.vertical_li:focus {
+    display: block;
+}
+
+li.vertical_li a {
+    display: block;
+    color: #ecf0f1;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li.vertical_li a.active {
+    background-color: #ecf0f1;
+    color: #3a6896cc;
+}
+
+li.vertical_li a:hover:not(.active) {
+    background-color: #3a6896cc;
+    color: #ecf0f1;
+}
+
+/* horizontal */
+ul.horizontal {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: #3a6896cc;
+    color: #ecf0f1;
+    width: 100%;
+    padding-left: 0rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    align-items: center;
+
+    a {
+        color: #ecf0f1;
+    }
+}
+
+ul.horizontal>.horizontal-one {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+ul.horizontal>.horizontal-one>.bid_class {
+    font-size: 20px;
+}
+
+
+ul.horizontal>.horizontal-one>li.horizontal_li>.sheets {
+    background-color: #1788d4;
+    color: #ffffff !important;
+    border-radius: 10%;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 17px;
+    padding-right: 17px;
+
+    &:hover {
+        background-color: #1398f1;
+        transition: .5s ease-out;
+    }
+}
+
+ul.horizontal-two {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    margin-right: 5rem;
+}
+ul.horizontal-two>li {
+    font-weight: 540;
+    text-transform: capitalize;
+}
+ul.horizontal-two>li:hover {
+    transform: scale(1.1);
+    color: #ecf0f1ad;
+}
+
+@media only screen and (min-width: 1200px) {
+    ul.vertical {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        /* Adjust as needed */
+        max-height: 100vh;
+        /* Set a maximum height to trigger the scrollbar */
+        background-color: #3a6896cc;
+        color: #ecf0f1;
+        overflow-y: auto;
+        /* Enable vertical scrollbar for the list */
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    ul.Visible {
+        transition: 1s;
+        transform: translate(ease-out);
+        opacity: 1;
+    }
+
+    ul.vertical {
+        overflow-y: auto;
+        scrollbar-width: thin;
+        /* Firefox */
+    }
+
+    /* Style the scrollbar thumb (the draggable part) */
+    ul.vertical::-webkit-scrollbar-thumb {
+        background-color: #56d8e4;
+        /* Thumb color for WebKit browsers */
+    }
+
+    /* Style the scrollbar track */
+    ul.vertical::-webkit-scrollbar-track {
+        background-color: #9f01ea;
+        /* Track color for WebKit browsers */
+    }
+
+    /* Style the scrollbar thumb and track for Firefox */
+    ul.vertical::-moz-scrollbar-thumb {
+        background-color: #56d8e4;
+        /* Thumb color for Firefox */
+    }
+
+    ul.vertical::-moz-scrollbar-track {
+        background-color: #9f01ea;
+        /* Track color for Firefox */
+    }
+
+    .li.vertical_li {
+        display: none;
+        color: #ecf0f1;
+        padding: 8px 16px;
+    }
+
+    .li.vertical_li:focus {
+        display: block;
+    }
+
+    li.vertical_li a {
+        display: block;
+        color: #ecf0f1;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    li.vertical_li a.active {
+        background-color: #ecf0f1;
+        color: #3a6896cc;
+    }
+
+    li.vertical_li a:hover:not(.active) {
+        background-color: #3a6896cc;
+        color: #ecf0f1;
+    }
+
+    /* horizontal */
+    ul.horizontal {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        background-color: #3a6896cc;
+        color: #ecf0f1;
+        width: 100%;
+        padding-left: 0rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        align-items: center;
+
+        a {
+            color: #ecf0f1;
+        }
+    }
+
+    ul.horizontal>.horizontal-one {
+        display: flex;
+        justify-content: space-around;
+        gap: 2rem;
+        align-items: center;
+        margin-left: 2rem;
+    }
+
+    ul.horizontal>.horizontal-one>.bid_class {
+        font-size: 20px;
+    }
+
+
+    ul.horizontal>.horizontal-one>li.horizontal_li>.sheets {
+        background-color: #1788d4;
+        color: #ffffff !important;
+        border-radius: 10%;
+        text-align: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 17px;
+        padding-right: 17px;
+
+        &:hover {
+            background-color: #1398f1;
+            transition: .5s ease-out;
+        }
+    }
+
+    ul.horizontal>.horizontal-two {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        align-items: center;
+        margin-right: 5rem;
+
+        li {
+            font-weight: 540;
+            text-transform: capitalize;
+        }
+    }
+
+    ul.horizontal>.horizontal-two>.horizontal_li:hover {
+        transform: scale(1.1);
+        color: #ecf0f1ad;
+    }
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+    ul.horizontal>.horizontal-one {
+        margin-left: 0rem;
+    }
+
+    ul.vertical {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 180px;
+        /* Adjust as needed */
+        max-height: 100vh;
+        /* Set a maximum height to trigger the scrollbar */
+        background-color: #3a6896cc;
+        color: #ecf0f1;
+        overflow-y: auto;
+        /* Enable vertical scrollbar for the list */
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    ul.Visible {
+        transition: 1s;
+        transform: translate(ease-out);
+        opacity: 1;
+    }
+
+    ul.vertical {
+        overflow-y: auto;
+        scrollbar-width: thin;
+        /* Firefox */
+    }
+
+    /* Style the scrollbar thumb (the draggable part) */
+    ul.vertical::-webkit-scrollbar-thumb {
+        background-color: #56d8e4;
+        /* Thumb color for WebKit browsers */
+    }
+
+    /* Style the scrollbar track */
+    ul.vertical::-webkit-scrollbar-track {
+        background-color: #9f01ea;
+        /* Track color for WebKit browsers */
+    }
+
+    /* Style the scrollbar thumb and track for Firefox */
+    ul.vertical::-moz-scrollbar-thumb {
+        background-color: #56d8e4;
+        /* Thumb color for Firefox */
+    }
+
+    ul.vertical::-moz-scrollbar-track {
+        background-color: #9f01ea;
+        /* Track color for Firefox */
+    }
+
+    .li.vertical_li {
+        display: none;
+        color: #ecf0f1;
+        padding: 8px 16px;
+    }
+
+    .li.vertical_li:focus {
+        display: block;
+    }
+
+    li.vertical_li a {
+        display: block;
+        color: #ecf0f1;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    li.vertical_li a.active {
+        background-color: #ecf0f1;
+        color: #3a6896cc;
+    }
+
+    li.vertical_li a:hover:not(.active) {
+        background-color: #3a6896cc;
+        color: #ecf0f1;
+    }
+
+    /* horizontal */
+    ul.horizontal {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        background-color: #3a6896cc;
+        color: #ecf0f1;
+        width: 100%;
+        padding-left: 0rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        align-items: center;
+
+        a {
+            color: #ecf0f1;
+        }
+    }
+
+    ul.horizontal>.horizontal-one {
+        display: flex;
+        justify-content: space-around;
+        gap: 1.7rem;
+        align-items: center;
+        margin-left: 2rem;
+    }
+
+    ul.horizontal>.horizontal-one>.bid_class {
+        font-size: 20px;
+    }
+
+
+    ul.horizontal>.horizontal-one>li.horizontal_li>.sheets {
+        background-color: #1788d4;
+        color: #ffffff !important;
+        border-radius: 10%;
+        text-align: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 17px;
+        padding-right: 17px;
+
+        &:hover {
+            background-color: #1398f1;
+            transition: .5s ease-out;
+        }
+    }
+
+    ul.horizontal>.horizontal-two {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        align-items: center;
+        margin-right: 5rem;
+
+        li {
+            font-weight: 540;
+            text-transform: capitalize;
+        }
+    }
+
+    ul.horizontal>.horizontal-two>.horizontal_li:hover {
+        transform: scale(1.1);
+        color: #ecf0f1ad;
+    }
+}
+
+@media only screen and (min-width: 824px) and (max-width: 991.98px) {
+    ul.horizontal>.horizontal-one {
+        margin-left: 0rem;
+    }
+
+    ul.vertical {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 180px;
+        /* Adjust as needed */
+        max-height: 100vh;
+        /* Set a maximum height to trigger the scrollbar */
+        background-color: #3a6896cc;
+        color: #ecf0f1;
+        overflow-y: auto;
+        /* Enable vertical scrollbar for the list */
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    ul.Visible {
+        transition: 1s;
+        transform: translate(ease-out);
+        opacity: 1;
+    }
+
+    ul.vertical {
+        overflow-y: auto;
+        scrollbar-width: thin;
+        /* Firefox */
+    }
+
+    /* Style the scrollbar thumb (the draggable part) */
+    ul.vertical::-webkit-scrollbar-thumb {
+        background-color: #56d8e4;
+        /* Thumb color for WebKit browsers */
+    }
+
+    /* Style the scrollbar track */
+    ul.vertical::-webkit-scrollbar-track {
+        background-color: #9f01ea;
+        /* Track color for WebKit browsers */
+    }
+
+    /* Style the scrollbar thumb and track for Firefox */
+    ul.vertical::-moz-scrollbar-thumb {
+        background-color: #56d8e4;
+        /* Thumb color for Firefox */
+    }
+
+    ul.vertical::-moz-scrollbar-track {
+        background-color: #9f01ea;
+        /* Track color for Firefox */
+    }
+
+    .li.vertical_li {
+        display: none;
+        color: #ecf0f1;
+        padding: 8px 16px;
+    }
+
+    .li.vertical_li:focus {
+        display: block;
+    }
+
+    li.vertical_li a {
+        display: block;
+        color: #ecf0f1;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    li.vertical_li a.active {
+        background-color: #ecf0f1;
+        color: #3a6896cc;
+    }
+
+    li.vertical_li a:hover:not(.active) {
+        background-color: #3a6896cc;
+        color: #ecf0f1;
+    }
+
+    /* horizontal */
+    ul.horizontal {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        background-color: #3a6896cc;
+        color: #ecf0f1;
+        width: 100%;
+        padding-left: 0rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        align-items: center;
+
+        a {
+            color: #ecf0f1;
+        }
+    }
+
+    ul.horizontal>.horizontal-one {
+        display: flex;
+        justify-content: space-around;
+        gap: 1.4rem;
+        align-items: center;
+        margin-left: 1.5rem;
+    }
+
+    ul.horizontal>.horizontal-one>.bid_class {
+        font-size: 20px;
+    }
+
+
+    ul.horizontal>.horizontal-one>li.horizontal_li>.sheets {
+        background-color: #1788d4;
+        color: #ffffff !important;
+        border-radius: 10%;
+        text-align: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 17px;
+        padding-right: 17px;
+
+        &:hover {
+            background-color: #1398f1;
+            transition: .5s ease-out;
+        }
+    }
+
+    ul.horizontal>.horizontal-two {
+        display: flex;
+        justify-content: center;
+        gap: 1.6rem;
+        align-items: center;
+        margin-right: 3rem;
+
+        li {
+            font-weight: 540;
+            text-transform: capitalize;
+        }
+    }
+
+    ul.horizontal>.horizontal-two>.horizontal_li:hover {
+        transform: scale(1.1);
+        color: #ecf0f1ad;
+    }
+}
+
+@media only screen and (min-width: 768.1.98px) and (max-width: 823.98px) {
+    ul.horizontal>.horizontal-one {
+        margin-left: 0rem;
+    }
+
+    ul.vertical {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 180px;
+        /* Adjust as needed */
+        max-height: 100vh;
+        /* Set a maximum height to trigger the scrollbar */
+        background-color: #3a6896cc;
+        color: #ecf0f1;
+        overflow-y: auto;
+        /* Enable vertical scrollbar for the list */
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    ul.Visible {
+        transition: 1s;
+        transform: translate(ease-out);
+        opacity: 1;
+    }
+
+    ul.vertical {
+        overflow-y: auto;
+        scrollbar-width: thin;
+        /* Firefox */
+    }
+
+    /* Style the scrollbar thumb (the draggable part) */
+    ul.vertical::-webkit-scrollbar-thumb {
+        background-color: #56d8e4;
+        /* Thumb color for WebKit browsers */
+    }
+
+    /* Style the scrollbar track */
+    ul.vertical::-webkit-scrollbar-track {
+        background-color: #9f01ea;
+        /* Track color for WebKit browsers */
+    }
+
+    /* Style the scrollbar thumb and track for Firefox */
+    ul.vertical::-moz-scrollbar-thumb {
+        background-color: #56d8e4;
+        /* Thumb color for Firefox */
+    }
+
+    ul.vertical::-moz-scrollbar-track {
+        background-color: #9f01ea;
+        /* Track color for Firefox */
+    }
+
+    .li.vertical_li {
+        display: none;
+        color: #ecf0f1;
+        padding: 8px 16px;
+    }
+
+    .li.vertical_li:focus {
+        display: block;
+    }
+
+    li.vertical_li a {
+        display: block;
+        color: #ecf0f1;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    li.vertical_li a.active {
+        background-color: #ecf0f1;
+        color: #3a6896cc;
+    }
+
+    li.vertical_li a:hover:not(.active) {
+        background-color: #3a6896cc;
+        color: #ecf0f1;
+    }
+
+    /* horizontal */
+    ul.horizontal {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        background-color: #3a6896cc;
+        color: #ecf0f1;
+        width: 100%;
+        padding-left: 0rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        align-items: center;
+
+        a {
+            color: #ecf0f1;
+        }
+    }
+
+    ul.horizontal>.horizontal-one {
+        display: flex;
+        justify-content: space-around;
+        gap: 1.4rem;
+        align-items: center;
+        margin-left: 1.5rem;
+    }
+
+    ul.horizontal>.horizontal-one>.bid_class {
+        font-size: 18px;
+    }
+
+
+    ul.horizontal>.horizontal-one>li.horizontal_li>.sheets {
+        background-color: #1788d4;
+        color: #ffffff !important;
+        border-radius: 10%;
+        text-align: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 17px;
+        padding-right: 17px;
+
+        &:hover {
+            background-color: #1398f1;
+            transition: .5s ease-out;
+        }
+    }
+
+    ul.horizontal>.horizontal-two {
+        display: flex;
+        justify-content: center;
+        gap: 1.6rem;
+        align-items: center;
+        margin-right: 2.5rem;
+
+        li {
+            font-weight: 540;
+            text-transform: capitalize;
+            font-size: 14px;
+        }
+    }
+
+    ul.horizontal>.horizontal-two>.horizontal_li:hover {
+        transform: scale(1.1);
+        color: #ecf0f1ad;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .toggleNavbarIcon {
+        opacity: 1 !important;
+        position: relative;
+        left: 200px;
+        color: yellow;
+    }
+
+    ul.horizontal>.horizontal-one {
+        margin-left: 0rem;
+    }
+
+    ul.vertical {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 180px;
+        /* Adjust as needed */
+        max-height: 100vh;
+        /* Set a maximum height to trigger the scrollbar */
+        background-color: #3a6896cc;
+        color: #ecf0f1;
+        overflow-y: auto;
+        /* Enable vertical scrollbar for the list */
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    ul.Visible {
+        transition: 1s;
+        transform: translate(ease-out);
+        opacity: 1;
+    }
+
+    ul.vertical {
+        overflow-y: auto;
+        scrollbar-width: thin;
+        /* Firefox */
+    }
+
+    /* Style the scrollbar thumb (the draggable part) */
+    ul.vertical::-webkit-scrollbar-thumb {
+        background-color: #56d8e4;
+        /* Thumb color for WebKit browsers */
+    }
+
+    /* Style the scrollbar track */
+    ul.vertical::-webkit-scrollbar-track {
+        background-color: #9f01ea;
+        /* Track color for WebKit browsers */
+    }
+
+    /* Style the scrollbar thumb and track for Firefox */
+    ul.vertical::-moz-scrollbar-thumb {
+        background-color: #56d8e4;
+        /* Thumb color for Firefox */
+    }
+
+    ul.vertical::-moz-scrollbar-track {
+        background-color: #9f01ea;
+        /* Track color for Firefox */
+    }
+
+    .li.vertical_li {
+        display: none;
+        color: #ecf0f1;
+        padding: 8px 16px;
+    }
+
+    .li.vertical_li:focus {
+        display: block;
+    }
+
+    li.vertical_li a {
+        display: block;
+        color: #ecf0f1;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    li.vertical_li a.active {
+        background-color: #ecf0f1;
+        color: #3a6896cc;
+    }
+
+    li.vertical_li a:hover:not(.active) {
+        background-color: #3a6896cc;
+        color: #ecf0f1;
+    }
+
+    /* horizontal */
+    ul.horizontal {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        background-color: #3a6896cc;
+        color: #ecf0f1;
+        width: 100%;
+        padding-left: 0rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        align-items: center;
+
+        a {
+            color: #ecf0f1;
+        }
+    }
+
+    ul.horizontal>.horizontal-one {
+        display: flex;
+        justify-content: space-around;
+        gap: 1.4rem;
+        align-items: center;
+        margin-left: 1.5rem;
+    }
+
+    ul.horizontal>.horizontal-one>.bid_class {
+        font-size: 18px;
+    }
+
+
+    ul.horizontal>.horizontal-one>li.horizontal_li>.sheets {
+        background-color: #1788d4;
+        color: #ffffff !important;
+        border-radius: 10%;
+        text-align: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 17px;
+        padding-right: 17px;
+
+        &:hover {
+            background-color: #1398f1;
+            transition: .5s ease-out;
+        }
+    }
+
+    ul.horizontal-two {
+        visibility: hidden; /* Hide by default */
+        flex-direction: column;
+        /* align-items: flex-start; */
+        gap: 1rem;
+        margin-right: 0;
+        height: 5vh;
+    }
+    ul.horizontal-three{
+        visibility: visible;
+    }
+    ul.horizontal-two>li {
+        display: block;
+    }
+}
